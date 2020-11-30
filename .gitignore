@@ -1,1 +1,4 @@
 Documentation
+*.DS_Store
+*.pyc
+*.vscode
