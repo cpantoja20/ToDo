@@ -13,7 +13,6 @@ tb_create_user ='''CREATE TABLE IF NOT EXISTS Users(
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    status BOOL,
     PRIMARY KEY(ID)
     )'''
 
@@ -28,3 +27,11 @@ tb_create_task ='''CREATE TABLE IF NOT EXISTS Tasks(
     PRIMARY KEY(id),
     FOREIGN KEY (user_id) REFERENCES Users(id)
     )'''
+
+#CRUD
+
+    #User
+
+        #Insert
+
+insert_user = '''INSERT INTO Users (name, email, password) VALUES (%s,%s,%s)'''
