@@ -3,9 +3,6 @@
 import psycopg2
 import SQLqueries as sql
 
-
-# establishing the connection
-
 while True:
     try:
         conn = psycopg2.connect(
@@ -32,12 +29,11 @@ while True:
 
 conn.autocommit = True
 
-#Creating a cursor object using the cursor() method
-cursor = conn.cursor()
+def create_tables():
+    cursor = conn.cursor()
+    cursor.execute(sql.tb_create_user)
+    cursor.execute(sql.tb_create_task)
+    conn.close()
 
-# #Creating a tables
-cursor.execute(sql.tb_create_user)
-cursor.execute(sql.tb_create_task)
 
-#Closing the connection
-conn.close()
+create_tables()
