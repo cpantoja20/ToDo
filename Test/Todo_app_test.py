@@ -4,5 +4,8 @@ import pytest
 from ..api import app
 
 def test_index():
-    response = app.test_client().get('/')
+    response = app.test_client().get('/api')
     assert response.status_code == 200
+
+
+
