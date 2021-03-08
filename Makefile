@@ -4,9 +4,10 @@
 test: 
 	tox	-e venv
 
+
 .PHONY: run
 run: 
-	python todo_app.py
+	python Api/app.py
 
 .PHONY: clean
 clean:
