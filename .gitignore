@@ -48,7 +48,7 @@ develop-eggs
 
 #React
 # dependencies
-node_modules
+Client/node_modules
 /.pnp
 .pnp.js
 
