@@ -15,8 +15,8 @@ const Delete = ({ id } ) => {
         }).then(response => response.json())
             .then(data => {
                 console.log(data);
-                history.push('/')
         })
+        history.push('/');
     }
 
     return(
