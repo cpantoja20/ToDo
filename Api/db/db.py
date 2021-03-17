@@ -1,4 +1,4 @@
-#Todo_app/Api/db/__init__.py
+#Api/db/db.py
 
 import psycopg2
 
